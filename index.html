@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanher Farms - Natural Tones Smart Ledger</title>
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .display-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Simple smooth transition for mock screens */
+    .screen-container {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="bg-[#FCFAF2] text-slate-800 antialiased min-h-screen flex flex-col selection:bg-[#2D5A27] selection:text-white">
+
+  <!-- Main Web Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#FCFAF2]/80 border-b border-[#E8E4D9] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-[#2D5A27] rounded-xl flex items-center justify-center text-[#D4AF37] shadow-sm">
+          <span class="text-xl">🌿</span>
+        </div>
+        <div>
+          <h1 class="text-md sm:text-lg font-bold leading-tight text-[#1B3A18] display-font">Wanher Farms</h1>
+          <p class="text-[10px] uppercase tracking-widest font-bold text-[#D4AF37] mono-font">Private Limited</p>
+        </div>
+      </div>
+      
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#7A7565]">
+        <a href="#overview" class="hover:text-[#2D5A27] transition-colors">Overview</a>
+        <a href="#interactive-demo" class="hover:text-[#2D5A27] transition-colors flex items-center gap-1.5">
+          <span class="w-2 h-2 bg-[#2D5A27] rounded-full animate-ping"></span> Live Demo
+        </a>
+        <a href="#features" class="hover:text-[#2D5A27] transition-colors">Features</a>
+        <a href="#installation" class="hover:text-[#2D5A27] transition-colors">Deployment</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#interactive-demo" class="hidden sm:inline-flex px-4 py-2 bg-[#F3F0E6] text-[#2D5A27] text-xs font-bold rounded-xl border border-[#E8E4D9] hover:bg-[#E8E4D9] transition-colors">
+          Try Simulator
+        </a>
+        <a href="#installation" class="inline-flex px-4 py-2 bg-[#2D5A27] text-[#FCFAF2] text-xs font-bold rounded-xl shadow-md hover:bg-[#1B3A18] transition-all">
+          Install APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="overview" class="relative overflow-hidden py-12 lg:py-20 border-b border-[#E8E4D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Text details -->
+        <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#F3F0E6] rounded-full text-[#D4AF37] text-xs font-bold tracking-wider uppercase border border-[#E8E4D9]">
+            <span>🌿</span> Natural Tones Framework
+          </div>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1B3A18] leading-tight display-font">
+            The Executive Smart Ledger for Modern Farms
+          </h2>
+          <p class="text-base sm:text-lg text-[#7A7565] max-w-xl leading-relaxed">
+            Manage your livestock registers, track harvest apiary yields, record daily financial ledger entries, print barcodes, and manage team members inside a singular, offline-first native Android experience built for durability.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 pt-2">
+            <div class="flex items-center gap-1.5 text-xs text-[#2D5A27] font-bold bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-full">
+              ✔️ Jetpack Compose
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-[#D4AF37] font-bold bg-yellow-50 border border-yellow-100 px-3 py-1.5 rounded-full">
+              ✔️ Modern Room DB
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-slate-600 font-bold bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-full">
+              ✔️ Bilingual Urdu & English
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <a href="#interactive-demo" class="inline-flex justify-center items-center px-6 py-3.5 bg-[#2D5A27] text-white font-bold rounded-xl shadow-lg hover:bg-[#1B3A18] transition-all group gap-2">
+              Explore Interactive Simulator
+              <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a href="#installation" class="inline-flex justify-center items-center px-6 py-3.5 bg-white border border-[#E8E4D9] text-[#1B3A18] font-bold rounded-xl hover:bg-[#F3F0E6] transition-colors">
+              APK Download Instructions
+            </a>
+          </div>
+        </div>
+
+        <!-- Static Showcase Deck -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm aspect-[4/5] bg-white rounded-3xl border border-[#E8E4D9] shadow-xl p-6 flex flex-col justify-between overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#FCFAF2]/50 rounded-full blur-3xl"></div>
+            
+            <div class="flex justify-between items-center z-10">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-[#2D5A27] rounded-lg flex items-center justify-center text-sm">🌾</div>
+                <span class="text-xs font-bold text-[#1B3A18]">Natural Tones</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-[#D4AF37] mono-font bg-[#F3F0E6] px-2 py-0.5 rounded-full border border-[#E8E4D9]">Offline KSP db</span>
+            </div>
+
+            <!-- Visual Graphic Mock -->
+            <div class="my-6 flex-1 flex flex-col justify-center items-center">
+              <div class="w-20 h-20 bg-[#F3F0E6] rounded-2xl flex items-center justify-center text-3xl shadow-sm border border-[#E8E4D9]">🐄</div>
+              <h3 class="mt-4 text-xl font-bold text-[#1B3A18] text-center display-font">Interactive & Portable</h3>
+              <p class="text-xs text-[#7A7565] text-center max-w-[240px] mt-2">
+                Designed to operate deep within rural farmlands with no secondary telemetry servers required.
+              </p>
+            </div>
+
+            <div class="bg-[#F3F0E6] p-3 rounded-2xl flex items-center justify-between text-[#1B3A18] z-10 border border-[#E8E4D9]">
+              <div class="flex items-center gap-2">
+                <span class="text-sm">💬</span>
+                <span class="text-[10px] font-bold">Try the Interactive App Simulator below</span>
+              </div>
+              <span class="text-[10px]">🌿</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Device Simulation Section -->
+  <section id="interactive-demo" class="py-16 bg-[#F3F0E6]/30 border-b border-[#E8E4D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1B3A18] display-font mb-4">
+          Live App Emulator
+        </h2>
+        <p class="text-[#7A7565] text-sm sm:text-base">
+          Experience the polished Material 3 screen architecture. Switch screens using the bottom navigation menu or interact with the elements directly inside the simulated device.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <!-- Control Deck (Left) -->
+        <div class="lg:col-span-4 order-2 lg:order-1 space-y-4">
+          <h3 class="text-lg font-bold text-[#1B3A18] display-font">Simulator Dashboard</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Click on the tabs below to instantly toggle screens inside the device emulator, showcasing exact typography pairings, dynamic color tones, and custom assets.
+          </p>
+
+          <div class="space-y-2 pt-2">
+            <!-- Selector 1: Dashboard -->
+            <button onclick="setMockScreen('dashboard')" id="btn-mock-dashboard" class="w-full flex items-center gap-3 p-3 bg-white hover:bg-[#F3F0E6] text-slate-800 rounded-xl border border-[#E8E4D9] text-left transition-all shadow-sm group">
+              <span class="w-8 h-8 rounded-lg bg-[#2D5A27] text-white flex items-center justify-center text-sm shadow-sm">🏠</span>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Executive Dashboard</p>
+                <p class="text-[10px] text-slate-500">Overview of livestock herd, net earnings & alerts</p>
+              </div>
+            </button>
+
+            <!-- Selector 2: Animals -->
+            <button onclick="setMockScreen('animals')" id="btn-mock-animals" class="w-full flex items-center gap-3 p-3 bg-white hover:bg-[#F3F0E6] text-slate-800 rounded-xl border border-transparent text-left transition-all shadow-sm group">
+              <span class="w-8 h-8 rounded-lg bg-neutral-100 text-[#2D5A27] flex items-center justify-center text-sm shadow-sm group-hover:bg-[#2D5A27] group-hover:text-white transition-colors">🐄</span>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Livestock Register</p>
+                <p class="text-[10px] text-slate-500">Goat, cow, buffalo details, statuses & profiles</p>
+              </div>
+            </button>
+
+            <!-- Selector 3: Honey -->
+            <button onclick="setMockScreen('honey')" id="btn-mock-honey" class="w-full flex items-center gap-3 p-3 bg-white hover:bg-[#F3F0E6] text-slate-800 rounded-xl border border-transparent text-left transition-all shadow-sm group">
+              <span class="w-8 h-8 rounded-lg bg-neutral-100 text-[#2D5A27] flex items-center justify-center text-sm shadow-sm group-hover:bg-[#2D5A27] group-hover:text-white transition-colors">🍯</span>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Apiary & Honey Registry</p>
+                <p class="text-[10px] text-slate-500">Track blossom honey, weight yields & print tags</p>
+              </div>
+            </button>
+
+            <!-- Selector 4: Financials -->
+            <button onclick="setMockScreen('financials')" id="btn-mock-financials" class="w-full flex items-center gap-3 p-3 bg-white hover:bg-[#F3F0E6] text-slate-800 rounded-xl border border-transparent text-left transition-all shadow-sm group">
+              <span class="w-8 h-8 rounded-lg bg-neutral-100 text-[#2D5A27] flex items-center justify-center text-sm shadow-sm group-hover:bg-[#2D5A27] group-hover:text-white transition-colors">💰</span>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Financial Ledgers</p>
+                <p class="text-[10px] text-slate-500">Income vs expense logs & beautiful graph statistics</p>
+              </div>
+            </button>
+
+            <!-- Selector 5: Alerts -->
+            <button onclick="setMockScreen('alerts')" id="btn-mock-alerts" class="w-full flex items-center gap-3 p-3 bg-white hover:bg-[#F3F0E6] text-slate-800 rounded-xl border border-transparent text-left transition-all shadow-sm group">
+              <span class="w-8 h-8 rounded-lg bg-neutral-100 text-[#2D5A27] flex items-center justify-center text-sm shadow-sm group-hover:bg-[#2D5A27] group-hover:text-white transition-colors">🔔</span>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Priority Smart Alerts</p>
+                <p class="text-[10px] text-slate-500">Vaccination, expected delivery, and safety logs</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Phone Device Frame (Center) -->
+        <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center">
+          <div class="relative border-[12px] border-neutral-900 rounded-[3rem] shadow-2xl overflow-hidden aspect-[9/19] h-[640px] bg-white text-slate-900 select-none">
+            <!-- Top island / Camera notch -->
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-5 bg-neutral-900 rounded-full z-50 flex items-center justify-center px-2">
+              <div class="w-2.5 h-2.5 bg-neutral-800 rounded-full mr-2"></div>
+              <div class="w-12 h-1 bg-neutral-800 rounded-full"></div>
+            </div>
+
+            <!-- High Quality Phone Status Bar -->
+            <div class="h-10 bg-white border-b border-gray-100 flex items-center justify-between px-6 text-[10px] font-bold text-slate-500 z-40 relative">
+              <div id="sim-time" class="mono-font text-[#1B3A18]">12:30</div>
+              <div class="flex items-center gap-1.5 text-xs text-[#1B3A18]">
+                <span>📶</span>
+                <span>📶</span>
+                <span class="text-[9px] font-black mr-0.5">LTE</span>
+                <span>🔋 94%</span>
+              </div>
+            </div>
+
+            <!-- Virtual Simulator Screens Content Window -->
+            <div class="h-[520px] bg-[#FCFAF2] overflow-y-auto overflow-x-hidden relative flex flex-col justify-between">
+              
+              <!-- Content Screen Section -->
+              <div class="flex-1 flex flex-col justify-start">
+                
+                <!-- Simulated Top App Bar -->
+                <div class="flex items-center justify-between px-4 py-3 bg-white border-b border-[#E8E4D9]">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 bg-[#2D5A27] rounded-lg flex items-center justify-center text-[#D4AF37] text-xs">
+                      <span>🌿</span>
+                    </div>
+                    <div>
+                      <h3 class="text-xs font-black text-[#1B3A18] tracking-tight leading-none" id="app-bar-title">Wanher Farms</h3>
+                      <p class="text-[8px] uppercase tracking-wider text-[#D4AF37] leading-tight mono-font" id="app-bar-sub">Admin (Amran Shah)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <!-- Language switch inside emulator -->
+                    <button onclick="toggleMockLanguage()" class="w-6 h-6 rounded bg-[#F3F0E6] flex items-center justify-center text-[9px] font-black text-[#2D5A27] border border-[#E8E4D9]" title="Toggle Language">
+                      <span id="lang-ind">UR</span>
+                    </button>
+                    <!-- Bell notifications -->
+                    <div onclick="setMockScreen('alerts')" class="w-6 h-6 rounded-full bg-[#F3F0E6] flex items-center justify-center text-xs relative cursor-pointer">
+                      <span>🔔</span>
+                      <span class="absolute -top-1 -right-1 w-3 h-3 bg-[#D4AF37] rounded-full text-[7px] text-[#1B3A18] font-bold flex items-center justify-center">3</span>
+                    </div>
+                    <!-- Exit button -->
+                    <div onclick="alert('Demo: Native Android app would slide to Login Screen.')" class="w-6 h-6 rounded-full bg-[#F3F0E6] flex items-center justify-center text-xs cursor-pointer">
+                      <span>🚪</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN: DASHBOARD -->
+                <div id="screen-dashboard" class="screen-container p-3.5 space-y-3.5">
+                  <div class="grid grid-cols-2 gap-2.5">
+                    <div class="bg-[#2D5A27] p-3.5 rounded-2xl flex flex-col justify-between h-24 shadow">
+                      <span class="text-[#D4AF37] text-[9px] font-bold uppercase tracking-wider">Total Livestock</span>
+                      <div>
+                        <span id="tot-livestock" class="text-2xl font-black text-white display-font">1,428</span>
+                        <span class="text-[9px] text-[#A8C69F] block mt-0.5">+12 this week</span>
+                      </div>
+                    </div>
+                    <div class="bg-white border border-[#E8E4D9] p-3.5 rounded-2xl flex flex-col justify-between h-24 shadow-sm">
+                      <span class="text-[#7A7565] text-[9px] font-bold uppercase tracking-wider">Net Profit</span>
+                      <div>
+                        <span id="net-profit" class="text-2xl font-black text-[#1B3A18] display-font">$8.4k</span>
+                        <span class="text-[9px] text-emerald-600 block mt-0.5">↑ 14.2%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Quick Module Grid (Interactive) -->
+                  <div>
+                    <h4 class="text-[11px] font-bold text-[#1B3A18] mb-1.5 uppercase tracking-wider">Core Modules</h4>
+                    <div class="grid grid-cols-4 gap-2">
+                      <div onclick="setMockScreen('animals')" class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="w-full aspect-square bg-[#F3F0E6] hover:bg-[#D4AF37]/20 transition-colors border border-[#E8E4D9] rounded-xl flex items-center justify-center text-lg shadow-sm">🐄</div>
+                        <span class="text-[8px] font-bold text-center text-[#1B3A18]">Animals</span>
+                      </div>
+                      <div onclick="setMockScreen('honey')" class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="w-full aspect-square bg-[#F3F0E6] hover:bg-[#D4AF37]/20 transition-colors border border-[#E8E4D9] rounded-xl flex items-center justify-center text-lg shadow-sm">🍯</div>
+                        <span class="text-[8px] font-bold text-center text-[#1B3A18]">Honey</span>
+                      </div>
+                      <div onclick="setMockScreen('financials')" class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="w-full aspect-square bg-[#F3F0E6] hover:bg-[#D4AF37]/20 transition-colors border border-[#E8E4D9] rounded-xl flex items-center justify-center text-lg shadow-sm">💰</div>
+                        <span class="text-[8px] font-bold text-center text-[#1B3A18]">Finance</span>
+                      </div>
+                      <div onclick="setMockScreen('alerts')" class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="w-full aspect-square bg-[#F3F0E6] hover:bg-[#D4AF37]/20 transition-colors border border-[#E8E4D9] rounded-xl flex items-center justify-center text-lg shadow-sm">🚨</div>
+                        <span class="text-[8px] font-bold text-center text-[#1B3A18]">Alerts</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Priority Alerts teaser -->
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <h4 class="text-[11px] font-bold text-[#1B3A18] uppercase tracking-wider">Priority alerts</h4>
+                      <span class="text-[8px] font-extrabold text-[#D4AF37] uppercase bg-[#2D5A27] px-2 py-0.5 rounded-full">3 Critical</span>
+                    </div>
+                    <div class="bg-white border-l-4 border-red-500 rounded-xl p-2.5 shadow-sm border border-gray-100 flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="text-sm">💉</span>
+                        <div>
+                          <p class="text-[10px] font-bold text-slate-800 leading-tight">Vaccination Overdue</p>
+                          <p class="text-[8.5px] text-slate-500">Batch Cow-A2 (42 animals)</p>
+                        </div>
+                      </div>
+                      <button onclick="setMockScreen('alerts')" class="px-2.5 py-0.5 bg-slate-900 text-white text-[8px] font-bold rounded">FIX</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN: ANIMALS REGISTER -->
+                <div id="screen-animals" class="screen-container p-3.5 space-y-3 hidden">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-[11px] font-bold text-[#1B3A18] uppercase tracking-wider">Livestock Register</h4>
+                    <span class="text-[9px] text-[#A8C69F] font-bold bg-[#2D5A27] px-2 py-0.5 rounded-full text-white">420 Head</span>
+                  </div>
+
+                  <!-- Custom dynamic filters -->
+                  <div class="flex gap-1 overflow-x-auto pb-1 text-[8px] font-bold">
+                    <span class="bg-[#2D5A27] text-white px-2.5 py-1 rounded-full border border-[#2D5A27]">All Speces</span>
+                    <span class="bg-white text-slate-600 px-2.5 py-1 rounded-full border border-[#E8E4D9]">Goats</span>
+                    <span class="bg-white text-slate-600 px-2.5 py-1 rounded-full border border-[#E8E4D9]">Cows</span>
+                    <span class="bg-white text-slate-600 px-2.5 py-1 rounded-full border border-[#E8E4D9]">Buffalo</span>
+                  </div>
+
+                  <!-- Animal lists -->
+                  <div class="space-y-2">
+                    <!-- Cow item -->
+                    <div class="bg-white border border-[#E8E4D9] rounded-xl p-2.5 shadow-sm relative flex gap-2">
+                      <div class="w-10 h-10 bg-[#F3F0E6] rounded-lg flex items-center justify-center text-lg">🐄</div>
+                      <div class="flex-1">
+                        <div class="flex justify-between">
+                          <p class="text-xs font-bold text-[#1B3A18]">Cow #120 (Sahiwal)</p>
+                          <span class="text-[7.5px] uppercase font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">Milking</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500">Age: 3.5 yrs • Weight: 420 kg • Female</p>
+                        <div class="flex gap-1.5 mt-2">
+                          <button class="bg-[#2D5A27] text-[#FCFAF2] text-[8px] font-bold py-1 px-2.5 rounded hover:bg-[#1B3A18] flex items-center gap-1">
+                            <span>📝</span> Edit
+                          </button>
+                          <button class="bg-[#FCFAF2] border border-[#E8E4D9] text-[#2D5A27] text-[8px] font-bold py-1 px-2.5 rounded hover:bg-[#F3F0E6] flex items-center gap-1">
+                            <span>📱</span> QR Code
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Goat item -->
+                    <div class="bg-white border border-[#E8E4D9] rounded-xl p-2.5 shadow-sm relative flex gap-2">
+                      <div class="w-10 h-10 bg-[#F3F0E6] rounded-lg flex items-center justify-center text-lg">🐐</div>
+                      <div class="flex-1">
+                        <div class="flex justify-between">
+                          <p class="text-xs font-bold text-[#1B3A18]">Goat #201 (Beetal)</p>
+                          <span class="text-[7.5px] uppercase font-bold text-pink-700 bg-pink-50 px-1.5 py-0.5 rounded border border-pink-100">Pregnant</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500">Age: 1.8 yrs • Weight: 45 kg • Breeder</p>
+                        <div class="flex gap-1.5 mt-2">
+                          <button class="bg-[#2D5A27] text-[#FCFAF2] text-[8px] font-bold py-1 px-2.5 rounded hover:bg-[#1B3A18] flex items-center gap-1">
+                            <span>📝</span> Edit
+                          </button>
+                          <button class="bg-[#FCFAF2] border border-[#E8E4D9] text-[#2D5A27] text-[8px] font-bold py-1 px-2.5 rounded hover:bg-[#F3F0E6] flex items-center gap-1">
+                            <span>📱</span> QR Code
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN: HONEY REGISTER -->
+                <div id="screen-honey" class="screen-container p-3.5 space-y-3 hidden">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-[11px] font-bold text-[#1B3A18] uppercase tracking-wider">Honey Registry</h4>
+                    <span class="text-[9px] text-[#2D5A27] font-bold bg-[#D4AF37]/20 border border-[#D4AF37]/40 px-2 py-0.5 rounded-full">850 Ltrs Total</span>
+                  </div>
+
+                  <div class="bg-white border border-[#E8E4D9] p-2.5 rounded-xl text-[10px] space-y-1 shadow-sm">
+                    <p class="font-bold text-[#1B3A18]">Seasonal Yield Analytics (Liter Graph)</p>
+                    <div class="flex gap-1.5 items-end justify-between h-16 pt-3 px-1 border-b border-[#E8E4D9]">
+                      <div class="flex-1 flex flex-col items-center">
+                        <div class="w-full bg-[#2D5A27] rounded-t" style="height: 45%"></div>
+                        <span class="text-[6.5px] mt-1 text-slate-500">Jan-Feb</span>
+                      </div>
+                      <div class="flex-1 flex flex-col items-center">
+                        <div class="w-full bg-[#D4AF37] rounded-t" style="height: 85%"></div>
+                        <span class="text-[6.5px] mt-1 text-slate-500">Mar-Apr</span>
+                      </div>
+                      <div class="flex-1 flex flex-col items-center">
+                        <div class="w-full bg-[#2D5A27] rounded-t" style="height: 60%"></div>
+                        <span class="text-[6.5px] mt-1 text-slate-500">May-Jun</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-2">
+                    <div class="bg-white border border-[#E8E4D9] rounded-xl p-2.5 flex items-center justify-between shadow-sm">
+                      <div class="flex items-center gap-2">
+                        <span class="text-xl">🍯</span>
+                        <div>
+                          <p class="text-xs font-bold text-slate-800">Sidr Honey (Batch SD8)</p>
+                          <p class="text-[9px] text-slate-500">Date: 12-Apr-2026 • 120 Liters yield</p>
+                        </div>
+                      </div>
+                      <button class="bg-[#2D5A27] text-white text-[8px] font-bold px-2 py-1 rounded">Invoice</button>
+                    </div>
+                    <div class="bg-white border border-[#E8E4D9] rounded-xl p-2.5 flex items-center justify-between shadow-sm">
+                      <div class="flex items-center gap-2">
+                        <span class="text-xl">🍯</span>
+                        <div>
+                          <p class="text-xs font-bold text-slate-800">Acacia Blossom (Batch AC3)</p>
+                          <p class="text-[9px] text-slate-500">Date: 28-May-2026 • 85 Liters yield</p>
+                        </div>
+                      </div>
+                      <button class="bg-[#2D5A27] text-white text-[8px] font-bold px-2 py-1 rounded">Invoice</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN: FINANCIALS -->
+                <div id="screen-financials" class="screen-container p-3.5 space-y-3.5 hidden">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-[11px] font-bold text-[#1B3A18] uppercase tracking-wider">Financial Ledgers</h4>
+                    <span class="text-[9px] text-white font-bold bg-[#2D5A27] px-2 py-0.5 rounded-full">Balanced</span>
+                  </div>
+
+                  <!-- Profit breakdown -->
+                  <div class="bg-[#F3F0E6] p-3 rounded-xl border border-[#E8E4D9] grid grid-cols-2 gap-2 text-center text-[10px]">
+                    <div class="border-r border-[#E8E4D9]">
+                      <p class="text-xs font-black text-emerald-800">+125,500 PKR</p>
+                      <p class="text-[8px] text-slate-500 uppercase tracking-wider">Total Income</p>
+                    </div>
+                    <div>
+                      <p class="text-xs font-black text-red-600">-34,200 PKR</p>
+                      <p class="text-[8px] text-slate-500 uppercase tracking-wider">Total Expense</p>
+                    </div>
+                  </div>
+
+                  <!-- Mini Ledger Entries -->
+                  <div class="space-y-1.5">
+                    <p class="text-[9px] font-bold text-[#1B3A18] uppercase tracking-wider">Recent Transactions</p>
+                    
+                    <div class="bg-white border border-[#E8E4D9] rounded-xl p-2.5 flex justify-between items-center shadow-sm">
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-red-600 font-bold text-xs bg-red-50 p-1.5 rounded-lg">↓</span>
+                        <div>
+                          <p class="text-xs font-bold text-slate-800 leading-tight">Alfalfa Feed Purcahse</p>
+                          <p class="text-[8px] text-slate-400">04-Jun-2026 • Expense</p>
+                        </div>
+                      </div>
+                      <span class="text-xs font-black text-red-600">-12,000 PKR</span>
+                    </div>
+
+                    <div class="bg-white border border-[#E8E4D9] rounded-xl p-2.5 flex justify-between items-center shadow-sm">
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-600 font-bold text-xs bg-emerald-50 p-1.5 rounded-lg font-bold">↑</span>
+                        <div>
+                          <p class="text-xs font-bold text-slate-800 leading-tight">Sold Cow Milk (140 Ltr)</p>
+                          <p class="text-[8px] text-slate-400">01-Jun-2026 • Income</p>
+                        </div>
+                      </div>
+                      <span class="text-xs font-black text-[#2D5A27]">+28,000 PKR</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN: ALERTS -->
+                <div id="screen-alerts" class="screen-container p-3.5 space-y-3.5 hidden">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-[11px] font-bold text-[#1B3A18] uppercase tracking-wider">Smart Alerts</h4>
+                    <span class="text-[9px] text-white font-extrabold bg-[#D4AF37] px-2 py-0.5 rounded-full">3 ALERTS</span>
+                  </div>
+
+                  <!-- Alert registers -->
+                  <div class="space-y-2.5">
+                    <div class="bg-white border-l-4 border-red-500 rounded-xl p-2.5 shadow-sm border border-gray-100 flex items-start gap-2.5">
+                      <span class="text-sm mt-0.5">💉</span>
+                      <div class="flex-1">
+                        <p class="text-xs font-bold text-slate-800 leading-tight">Vaccination Overdue</p>
+                        <p class="text-[8.5px] text-slate-500 mt-0.5">Every animal in Cow Batch A2 requires urgent foot-and-mouth vaccine updates before seasonal shifts.</p>
+                        <button onclick="alert('Simulation: Logged Vaccine completion inside Local Registry!')" class="mt-2.5 px-3 py-1 bg-slate-900 text-white text-[8px] font-bold rounded">Mark Completed</button>
+                      </div>
+                    </div>
+
+                    <div class="bg-white border-l-4 border-[#D4AF37] rounded-xl p-2.5 shadow-sm border border-gray-100 flex items-start gap-2.5">
+                      <span class="text-sm mt-0.5">🍼</span>
+                      <div class="flex-1">
+                        <p class="text-xs font-bold text-slate-800 leading-tight">Expected Pregnancy Delivery</p>
+                        <p class="text-[8.5px] text-slate-500 mt-0.5">Goat #092 is projected to give birth within 48 hours. Ready the maternity quarantine bay and monitoring feeds.</p>
+                      </div>
+                    </div>
+
+                    <div class="bg-white border-l-4 border-[#2D5A27] rounded-xl p-2.5 shadow-sm border border-gray-100 flex items-start gap-2.5">
+                      <span class="text-sm mt-0.5">🏷️</span>
+                      <div class="flex-1">
+                        <p class="text-xs font-bold text-slate-800 leading-tight">Honey Label Inventory Low</p>
+                        <p class="text-[8.5px] text-slate-500 mt-0.5">Acacia Blossom Honey branding thermal labels have remaining volume of less than 200 items.</p>
+                        <button onclick="alert('Mock Order Placed!')" class="mt-2.5 px-3 py-1 bg-[#2D5A27] text-white text-[8px] font-bold rounded">Order Items</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- HIGH QUALITY PHONE BOTTOM REGULAR BAR NAVIGATION -->
+              <nav class="h-16 bg-white border-t border-[#E8E4D9] flex items-center justify-around px-2 z-40 relative">
+                <!-- Nav: Dashboard -->
+                <button onclick="setMockScreen('dashboard')" id="nav-btn-dashboard" class="flex flex-col items-center justify-center gap-0.5 flex-1 h-full text-[#1B3A18]">
+                  <div class="w-11 h-6 bg-[#2D5A27] rounded-xl flex items-center justify-center text-white text-xs transition-all" id="nav-pill-dashboard">
+                    <span>🏠</span>
+                  </div>
+                  <span class="text-[8px] font-bold text-[#1B3A18]">Home</span>
+                </button>
+                <!-- Nav: Animals -->
+                <button onclick="setMockScreen('animals')" id="nav-btn-animals" class="flex flex-col items-center justify-center gap-0.5 flex-1 h-full text-[#7A7565]">
+                  <div class="w-11 h-6 flex items-center justify-center text-xs transition-all" id="nav-pill-animals">
+                    <span>🐄</span>
+                  </div>
+                  <span class="text-[8px] font-semibold">Animals</span>
+                </button>
+                <!-- Nav: Honey -->
+                <button onclick="setMockScreen('honey')" id="nav-btn-honey" class="flex flex-col items-center justify-center gap-0.5 flex-1 h-full text-[#7A7565]">
+                  <div class="w-11 h-6 flex items-center justify-center text-xs transition-all" id="nav-pill-honey">
+                    <span>🍯</span>
+                  </div>
+                  <span class="text-[8px] font-semibold">Honey</span>
+                </button>
+                <!-- Nav: Financials -->
+                <button onclick="setMockScreen('financials')" id="nav-btn-financials" class="flex flex-col items-center justify-center gap-0.5 flex-1 h-full text-[#7A7565]">
+                  <div class="w-11 h-6 flex items-center justify-center text-xs transition-all" id="nav-pill-financials">
+                    <span>💰</span>
+                  </div>
+                  <span class="text-[8px] font-semibold">Finance</span>
+                </button>
+              </nav>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Spec sheet (Right) -->
+        <div class="lg:col-span-3 order-3 space-y-6 flex flex-col justify-center">
+          <div class="bg-white border border-[#E8E4D9] rounded-2xl p-4 shadow-sm">
+            <h4 class="text-xs uppercase font-black tracking-widest text-[#D4AF37] mb-2 mono-font">Theme Styling</h4>
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-[#2D5A27] inline-block border border-black/10"></span>
+                <span class="text-[10px] text-slate-600">Forest Dark (#2D5A27)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-[#D4AF37] inline-block border border-black/10"></span>
+                <span class="text-[10px] text-slate-600">Golden Mustard (#D4AF37)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-[#FCFAF2] inline-block border border-black/10"></span>
+                <span class="text-[10px] text-slate-600">Ivory Canvas (#FCFAF2)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-[#F3F0E6] inline-block border border-black/10"></span>
+                <span class="text-[10px] text-slate-600">Soft Chalk Gray (#F3F0E6)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#2D5A27] text-[#FCFAF2] rounded-2xl p-4 shadow shadow-emerald-950/20">
+            <h4 class="text-xs uppercase font-black tracking-widest text-[#D4AF37] mb-1.5 mono-font">State Engine</h4>
+            <p class="text-[11px] leading-relaxed text-emerald-100">
+              The Jetpack native application uses a relational Room Database layered with Kotlin StateFlow, backing local persistence with instantaneous reactivity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Features Grid Section -->
+  <section id="features" class="py-16 border-b border-[#E8E4D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-[#1B3A18] display-font mb-4">
+          Engineered Features List
+        </h2>
+        <p class="text-[#7A7565] text-sm">
+          A native toolchain engineered to solve challenges inside farming ecosystems.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white border border-[#E8E4D9] p-6 rounded-2xl shadow-sm space-y-3 hover:translate-y-[-2px] transition-transform">
+          <div class="w-10 h-10 bg-[#F3F0E6] rounded-xl flex items-center justify-center text-lg">📁</div>
+          <h3 class="font-bold text-[#1B3A18] text-sm">Offline-First Core</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Relies entirely on client-side Room database layers, allowing remote operations on pastures away from stable cell receptions.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white border border-[#E8E4D9] p-6 rounded-2xl shadow-sm space-y-3 hover:translate-y-[-2px] transition-transform">
+          <div class="w-10 h-10 bg-[#F3F0E6] rounded-xl flex items-center justify-center text-lg">📜</div>
+          <h3 class="font-bold text-[#1B3A18] text-sm">Thermal Invoicing & Tags</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Generates custom clean invoice details and QR Code barcodes for animal classification tags to automate traceability easily.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white border border-[#E8E4D9] p-6 rounded-2xl shadow-sm space-y-3 hover:translate-y-[-2px] transition-transform">
+          <div class="w-10 h-10 bg-[#F3F0E6] rounded-xl flex items-center justify-center text-lg">💬</div>
+          <h3 class="font-bold text-[#1B3A18] text-sm">Bilingual Language Switch</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Switch the complete application seamlessly between **Urdu** and **English** matching localized user competencies.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white border border-[#E8E4D9] p-6 rounded-2xl shadow-sm space-y-3 hover:translate-y-[-2px] transition-transform">
+          <div class="w-10 h-10 bg-[#F3F0E6] rounded-xl flex items-center justify-center text-lg">💰</div>
+          <h3 class="font-bold text-[#1B3A18] text-sm">Financial Analytics</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Log raw values, group elements systematically, and view realtime budget fluctuations without writing intricate formulas.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white border border-[#E8E4D9] p-6 rounded-2xl shadow-sm space-y-3 hover:translate-y-[-2px] transition-transform">
+          <div class="w-10 h-10 bg-[#F3F0E6] rounded-xl flex items-center justify-center text-lg">🔑</div>
+          <h3 class="font-bold text-[#1B3A18] text-sm">Role-Based Accounts</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Segment credentials between Executive Admins, Financial Accountants, Herd Managers, and Apiary Specialists seamlessly.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white border border-[#E8E4D9] p-6 rounded-2xl shadow-sm space-y-3 hover:translate-y-[-2px] transition-transform">
+          <div class="w-10 h-10 bg-[#F3F0E6] rounded-xl flex items-center justify-center text-lg">🚨</div>
+          <h3 class="font-bold text-[#1B3A18] text-sm">Urgent Push Notifications</h3>
+          <p class="text-xs text-[#7A7565] leading-relaxed">
+            Real-time critical reminder widgets track vaccination cycles, deliver warnings on expected births, and low supplies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation & Deployment Instructions Section -->
+  <section id="installation" class="py-16 bg-white border-b border-[#E8E4D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Info -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-extrabold text-[#1B3A18] display-font">
+            Local Build & Installation Guide
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            This repository contains the complete native Android Jetpack Compose codebase. Follow the commands to compile and sign your custom offline APK package.
+          </p>
+
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-[#F3F0E6] rounded-lg flex items-center justify-center text-xs font-bold text-[#2D5A27] mt-0.5">1</div>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Setup JDK and SDK Environments</p>
+                <p class="text-[11px] text-slate-500">Ensure JDK 17+ and the Android Platform SDK (API 34) are configured on your development terminal.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-[#F3F0E6] rounded-lg flex items-center justify-center text-xs font-bold text-[#2D5A27] mt-0.5">2</div>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Compile with Kotlin Compiler & Gradle</p>
+                <p class="text-[11px] text-slate-500">Run the release gradle task to assemble debug or signed bundles automatically.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-[#F3F0E6] rounded-lg flex items-center justify-center text-xs font-bold text-[#2D5A27] mt-0.5">3</div>
+              <div>
+                <p class="text-xs font-bold text-[#1B3A18]">Transfer and Sideload</p>
+                <p class="text-[11px] text-slate-500">Install the compiled package direct onto standard Android devices with full security certificates intact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLI Console -->
+        <div class="bg-neutral-900 rounded-2xl p-6 shadow-xl text-slate-200 text-xs font-mono space-y-4 border border-neutral-800">
+          <div class="flex justify-between items-center pb-2 border-b border-neutral-800">
+            <div class="flex gap-1.5">
+              <span class="w-3 h-3 bg-red-500 rounded-full inline-block"></span>
+              <span class="w-3 h-3 bg-yellow-500 rounded-full inline-block"></span>
+              <span class="w-3 h-3 bg-green-500 rounded-full inline-block"></span>
+            </div>
+            <span class="text-[10px] text-neutral-500 uppercase">Interactive Terminal</span>
+          </div>
+
+          <div class="space-y-3">
+            <div>
+              <p class="text-neutral-500"># Clone parent repository</p>
+              <p class="text-amber-400">$ <span class="text-white">git clone https://github.com/aistudio/wanherfields.git</span></p>
+            </div>
+            <div>
+              <p class="text-neutral-500"># Assemble native APK package</p>
+              <p class="text-amber-400">$ <span class="text-white">gradle assembleDebug</span></p>
+            </div>
+            <div>
+              <p class="text-neutral-500"># Verify build bundles</p>
+              <p class="text-emerald-400">BUILD SUCCESSFUL in 22s</p>
+              <p class="text-[#D4AF37] text-[11px]">31 actionable tasks: 2 executed, 29 up-to-date</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Web Footer -->
+  <footer class="mt-auto bg-[#1B3A18] text-[#F3F0E6] border-t border-[#FCFAF2]/10 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-md">🌿</div>
+        <div>
+          <h2 class="text-sm font-bold text-white tracking-wide display-font">Wanher Farms</h2>
+          <p class="text-[9px] uppercase tracking-wider text-[#D4AF37] mono-font">Private Limited</p>
+        </div>
+      </div>
+      
+      <p class="text-xs text-emerald-100/60 max-w-sm text-center sm:text-right font-medium">
+        Designed & compiled utilizing Android SDK, Kotlin, Jetpack Compose UI, state architectures, and local Room db tables.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Web Emulator Logic Script -->
+  <script>
+    // Real-time time updater
+    function updateSimTime() {
+      const el = document.getElementById('sim-time');
+      if (el) {
+        const now = new Date();
+        let h = now.getHours();
+        let m = now.getMinutes();
+        if (h < 10) h = '0' + h;
+        if (m < 10) m = '0' + m;
+        el.innerText = h + ':' + m;
+      }
+    }
+    setInterval(updateSimTime, 1000);
+    updateSimTime();
+
+    // Toggle Screen Mechanism
+    let activeMockScreen = 'dashboard';
+    
+    function setMockScreen(screenId) {
+      activeMockScreen = screenId;
+      
+      // Select screen DOM containers
+      const screens = ['dashboard', 'animals', 'honey', 'financials', 'alerts'];
+      screens.forEach(s => {
+        const el = document.getElementById(`screen-${s}`);
+        if(el) {
+          if (s === screenId) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+        
+        // Update control dashboard buttons
+        const btn = document.getElementById(`btn-mock-${s}`);
+        if(btn) {
+          if (s === screenId) {
+            btn.classList.add('border-[#E8E4D9]', 'bg-white');
+            btn.classList.remove('border-transparent');
+            btn.querySelector('span').className = 'w-8 h-8 rounded-lg bg-[#2D5A27] text-white flex items-center justify-center text-sm shadow-sm';
+          } else {
+            btn.classList.remove('border-[#E8E4D9]', 'bg-white');
+            btn.classList.add('border-transparent');
+            btn.querySelector('span').className = 'w-8 h-8 rounded-lg bg-neutral-100 text-[#2D5A27] flex items-center justify-center text-sm shadow-sm group-hover:bg-[#2D5A27] group-hover:text-white transition-colors';
+          }
+        }
+
+        // Update phone bottom nav bar indices
+        const navPill = document.getElementById(`nav-pill-${s}`);
+        const navBtn = document.getElementById(`nav-btn-${s}`);
+        if (navPill && navBtn) {
+          if (s === screenId) {
+            navPill.classList.add('bg-[#2D5A27]', 'text-white');
+            navBtn.classList.add('text-[#1B3A18]');
+            navBtn.querySelector('span').className = 'text-[8px] font-bold text-[#1B3A18]';
+          } else {
+            navPill.classList.remove('bg-[#2D5A27]', 'text-white');
+            navBtn.classList.remove('text-[#1B3A18]');
+            navBtn.querySelector('span').className = 'text-[8px] font-semibold';
+          }
+        }
+      });
+    }
+
+    // Toggle simulated translation
+    let mockLang = 'en';
+    const translations = {
+      en: {
+        title: "Wanher Farms",
+        sub: "Admin (Amran Shah)",
+        totLivestock: "1,428",
+        netProfit: "$8.4k"
+      },
+      ur: {
+        title: "وانہر فارمز",
+        sub: "ایڈمن (عمران شاہ)",
+        totLivestock: "۱،۴۲۸",
+        netProfit: "۸.۴ کلو"
+      }
+    };
+
+    function toggleMockLanguage() {
+      if (mockLang === 'en') {
+        mockLang = 'ur';
+        document.getElementById('lang-ind').innerText = 'EN';
+      } else {
+        mockLang = 'en';
+        document.getElementById('lang-ind').innerText = 'UR';
+      }
+
+      document.getElementById('app-bar-title').innerText = translations[mockLang].title;
+      document.getElementById('app-bar-sub').innerText = translations[mockLang].sub;
+      document.getElementById('tot-livestock').innerText = translations[mockLang].totLivestock;
+      document.getElementById('net-profit').innerText = translations[mockLang].netProfit;
+    }
+  </script>
+</body>
+</html>
